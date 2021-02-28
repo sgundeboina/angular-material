@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<app-toolbar [deviceXs]="deviceXs"></app-toolbar>
+
+<div fxLayout="column" fxLayoutAlign="spaces-around stretch">
+    <div fxFlex="90" fxLayout="row" fxLayoutAlign="spaces-between stretch">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<app-footer></app-footer>
