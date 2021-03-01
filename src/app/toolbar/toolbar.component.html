@@ -2,7 +2,7 @@
   class="dymmy-1">
   <mat-toolbar-row fxLayout="row">
     <div fxFlex="10" fxLayoutAlign="begin center" fxLayoutGap="2%">
-      <button mat-button>
+      <button mat-button [routerLink]="'/home'">
         <mat-icon>home</mat-icon>
         <span class="logo">Srini</span>
       </button>
@@ -24,7 +24,7 @@
       </button>
     </div>
 
-    <div fxFlex="auto" fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="end center" *ngIf="this.deviceXs">
+    <div fxFlex="auto" fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="end center" >
 
       <button mat-button [matMenuTriggerFor]="notifications">
         <mat-icon matBadge="8" matBadgeColor="warn"> circle_notifications</mat-icon>
@@ -34,7 +34,7 @@
         <mat-icon> account_circle</mat-icon>
       </button>
 
-      <button mat-button *ngIf="this.deviceXs" [matMenuTriggerFor]="menu">
+      <button mat-button *ngIf="this.deviceXs" [matMenuTriggerFor]="menu" >
         <mat-icon>menu</mat-icon>
       </button>
     </div>
