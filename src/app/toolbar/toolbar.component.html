@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" fxFlex="99" fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="spaces-around center"
   class="dymmy-1">
-  <mat-toolbar-row fxFlex="99" fxLayout="row">
+  <mat-toolbar-row fxLayout="row">
     <div fxFlex="10" fxLayoutAlign="begin center" fxLayoutGap="2%">
       <button mat-button>
         <mat-icon>home</mat-icon>
@@ -8,8 +8,7 @@
       </button>
     </div>
 
-
-    <div fxFlex="auto" fxLayoutAlign="begin center" fxLayoutGap="2%" *ngIf="!this.deviceXs">
+    <div fxFlex="70" fxLayoutAlign="begin center" fxLayoutGap="2%" *ngIf="!this.deviceXs">
       <button mat-button [routerLink]="'/home'">
         <span>Home</span>
       </button>
@@ -25,9 +24,10 @@
       </button>
     </div>
 
-    <div fxFlex="15" fxLayoutAlign="end center">
-      <button mat-button matBadge="8" matBadgeColor="warn" [matMenuTriggerFor]="notifications">
-        <mat-icon> circle_notifications</mat-icon>
+    <div fxFlex="auto" fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="end center" *ngIf="this.deviceXs">
+
+      <button mat-button [matMenuTriggerFor]="notifications">
+        <mat-icon matBadge="8" matBadgeColor="warn"> circle_notifications</mat-icon>
       </button>
 
       <button mat-button [routerLink]="'/login'">
@@ -43,7 +43,7 @@
 
 
 <mat-menu #menu="matMenu" fxLayoutAlign="space-between end" fxLayoutGap="2%" color="primary">
-  <div fxLayout="column" class="mega-menu">
+  <div fxLayout="column" >
     <button mat-button [routerLink]="'/home'">
       <span>Home</span>
     </button>

@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { MatBadgeModule } from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { FooterComponent } from './footer/footer.component';
     MatListModule,
     MatInputModule,
     MatMenuModule,
+    MatBadgeModule,
     MatFormFieldModule
   ],
   providers: [],
